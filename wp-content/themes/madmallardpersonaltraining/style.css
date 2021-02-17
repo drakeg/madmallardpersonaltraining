@@ -1,0 +1,187 @@
+/*
+Theme name: Mad Mallard Personal Training
+Text Domain: Mad Mallard Personal Training
+Version: 0.1
+Description: Fancy top menu bar dark theme
+Tags: responsive, bootstrap, fancy, top-menu
+Author: Greg Drake
+Author URI: http://www.madmallardpersonaltraining.com
+*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body {
+    background-color: #212529;
+    height: 2000px;
+    font-family: 'Oswald',sans-serif;
+    color: #26313c;
+    line-height: 1.5;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    transition: all 0.7s;
+    z-index: 9;
+}
+
+.header .wrap {
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header.sticky {
+    width: 100%;
+    position: fixed;
+    background-color: #212529;
+    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.35);
+}
+
+.header .logo {
+    margin: 0;
+    padding: 16px 0;
+}
+
+.header .logo a,
+.header .logo a img {
+    display: block;
+}
+
+.header .logo img {
+    width: 190px;
+    color: white;
+}
+
+.header .menu ul {
+    display: flex;
+}
+
+.header .menu li {
+    padding: 16px;
+}
+
+.header .menu a {
+    font-size: 1.2rem;
+    color: white;
+    padding: 8px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.header .menu a:hover {
+    color: #24cdd5;
+}
+.home {
+    margin-top: 100px;
+}
+
+.hero-text {
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    background-color: #0bceaf;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+}
+
+.name {
+    font-size: 80px;
+    letter-spacing: -1px;
+}
+
+.designation {
+    font-size: 30px;
+}
+
+.email {
+    margin-top: 40px !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social-icons li {
+    list-style: none;
+    margin-right: 30px;
+    margin-top: 40px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero-img {
+    margin-left: 140px;
+    margin-top: -40px;
+}
+
+.hero-img img {
+    margin: 0 auto;
+    float: none;
+    text-align: center;
+    border: 20px solid rgba(0,0,0,0.17);
+    border-radius: 50%;
+}
+
+.img-border {
+    height: 400px;
+    width: 400px;
+    border: 20px solid rgba(0,0,0,0.07);
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    width: 10px;
+    background: #212529;
+    border-left: 0 solid white;
+    border-right: 0 solid white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3bb78f;
+    width: 0;
+    height: 35%;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
