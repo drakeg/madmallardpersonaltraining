@@ -1,0 +1,98 @@
+/*
+ *  * Theme name: MM Personal Training
+ *  * Text Domain: Mad Mallard Personal Training
+ *  * Version: 0.1
+ *  * Description: Fancy top menu bar dark theme
+ *  * Tags: responsive, bootstrap, fancy, top-menu
+ *  * Author: Greg Drake
+ *  * Author URI: http://www.madmallardpersonaltraining.com
+ *  * */
+@viewport {
+    width: device-width;
+}
+@-ms-viewport {
+    width: device-width;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #000;
+    color: #fff;
+}
+div.hero-image {
+    padding: 0 0 60px 0;
+}
+div.hero-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+div.nothing {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/logo.png");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+div.logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0%;
+}
+div.topnav {
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+div.topnav ul#menu-header-menu.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+div.topnav li.menu-item {
+    float: left;
+}
+div.topnav li.menu-item:last-child {
+    border-right: none;
+}
+div.topnav li.menu-item.current-menu-item {
+    background-color: gray;
+    text-decoration: none;
+    text-align: center;
+}
+div.topnav li.menu-item a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+}
+div.topnav li.menu-item a:hover {
+    color: #000;
+    background-color: gray;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+
+
+div.footer li.menu-item {
+    display: inline;
+}
+div.footer li.menu-item a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+}
