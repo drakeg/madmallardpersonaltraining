@@ -28,7 +28,7 @@
 		"postcss-nested": "^8.0.0",
 		"rtlcss": "^4.1.1",
 		"sass": "^1.28.0",
-		"stylelint": "^13.7.2",
+		"stylelint": "^17.0.0",
 		"stylelint-config-recommended-scss": "^4.2.0",
 		"stylelint-config-wordpress": "^17.0.0"
 	},
