@@ -7,7 +7,7 @@
   },
   "homepage": "https://github.com/WordPress/twentynineteen#readme",
   "devDependencies": {
-    "@wordpress/browserslist-config": "^6.0.0",
+    "@wordpress/browserslist-config": "^7.0.0",
     "autoprefixer": "^10.0.0",
     "chokidar-cli": "^3.0.0",
     "node-sass": "^9.0.0",
