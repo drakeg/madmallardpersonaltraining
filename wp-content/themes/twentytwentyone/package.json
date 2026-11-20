@@ -29,7 +29,7 @@
 		"rtlcss": "^4.1.1",
 		"sass": "^1.28.0",
 		"stylelint": "^18.0.0",
-		"stylelint-config-recommended-scss": "^17.0.0",
+		"stylelint-config-recommended-scss": "^18.0.0",
 		"stylelint-config-wordpress": "^17.0.0"
 	},
 	"rtlcssConfig": {
