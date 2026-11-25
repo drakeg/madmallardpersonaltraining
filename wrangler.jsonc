@@ -1,0 +1,9 @@
+{
+  "name": "madmallardpersonaltraining",
+  "compatibility_date": "2026-11-24",
+  "assets": {
+    "directory": "./site-preview",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true
+}
