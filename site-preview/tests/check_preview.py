@@ -32,6 +32,7 @@ class PreviewTests(unittest.TestCase):
     def test_preview_config(self):
         config = json.loads((ROOT.parent / "wrangler.jsonc").read_text())
         self.assertEqual(config["assets"]["directory"], "./site-preview")
+        self.assertIsInstance(config.get("previews"), dict)
         self.assertEqual(config["assets"]["not_found_handling"], "404-page")
         self.assertIn("X-Robots-Tag: noindex", (ROOT / "_headers").read_text())
         self.assertIn("Disallow: /", (ROOT / "robots.txt").read_text())
