@@ -19,3 +19,6 @@ From repository root: `python3 -m http.server 8097 --bind 0.0.0.0 --directory si
 Worker: `madmallardpersonaltraining`. URL: https://madmallardpersonaltraining.greg-202.workers.dev/. Repository root is the build root; no build command is needed; deploy command `npx wrangler deploy`. The root Wrangler config serves only site-preview, excludes Markdown via .assetsignore, and returns a custom 404. Do not attach the production domain. Preview is public, not an authenticated staging site. Search indexing is discouraged, not guaranteed blocked.
 
 Verify after merge: homepage, unknown URL returns 404, robots.txt, X-Robots-Tag, mobile layout, keyboard navigation and inquiry behavior. Verify Cloudflare build commit matches main. Dashboard Git connection and actual deployment are not independently verified.
+
+## Sprint 2: consultation preparation
+Training cards preselect the visitor's goal. Four required choices produce a local-only summary and downloadable text file; changing a choice clears the previous summary. No contact details or health data collected. Run `python3 site-preview/tests/check_preview.py` and `node --check site-preview/inquiry.js` from repository root. GitHub Actions runs both on preview changes. Browser tests and actual inquiry delivery remain backlog items.

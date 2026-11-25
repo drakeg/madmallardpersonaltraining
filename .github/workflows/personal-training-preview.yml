@@ -1,0 +1,24 @@
+name: Personal training preview
+on:
+  pull_request:
+    paths:
+      - 'site-preview/**'
+      - 'wrangler.jsonc'
+      - '.github/workflows/personal-training-preview.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site-preview/**'
+      - 'wrangler.jsonc'
+      - '.github/workflows/personal-training-preview.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: python3 site-preview/tests/check_preview.py
+      - run: node --check site-preview/inquiry.js
