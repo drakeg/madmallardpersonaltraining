@@ -28,10 +28,14 @@ class PreviewTests(unittest.TestCase):
         self.assertTrue(set(page.anchors + page.labels) <= set(page.ids))
         self.assertTrue({"goal", "experience", "equipment", "schedule", "inquiry", "download", "result"} <= set(page.ids))
         self.assertEqual(len(page.goals), 3)
+        self.assertIn("resources", page.ids)
+        self.assertFalse((ROOT.parent / "site-preview").exists())
+        for legacy in ("wp-admin", "wp-content", "wp-includes", "wp-config.php"):
+            self.assertFalse((ROOT.parent / legacy).exists(), legacy)
         for src in page.scripts: self.assertTrue((ROOT / src).is_file())
     def test_preview_config(self):
         config = json.loads((ROOT.parent / "wrangler.jsonc").read_text())
-        self.assertEqual(config["assets"]["directory"], "./site-preview")
+        self.assertEqual(config["assets"]["directory"], "./site")
         self.assertIsInstance(config.get("previews"), dict)
         self.assertEqual(config["assets"]["not_found_handling"], "404-page")
         self.assertIn("X-Robots-Tag: noindex", (ROOT / "_headers").read_text())
