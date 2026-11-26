@@ -13,6 +13,7 @@ function invalidate() {
   result.textContent = '';
 }
 form.addEventListener('change', invalidate);
+form.addEventListener('reset', invalidate);
 form.addEventListener('submit', event => {
   event.preventDefault();
   if (!form.reportValidity()) return;
