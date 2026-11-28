@@ -23,3 +23,6 @@ jobs:
       - run: python3 site/tests/check_preview.py
       - run: node --check site/inquiry.js
       - run: node site/tests/inquiry.test.cjs
+      - run: python3 -m pip install playwright==1.51.0
+      - run: python3 -m playwright install --with-deps chromium
+      - run: python3 site/tests/browser_test.py
