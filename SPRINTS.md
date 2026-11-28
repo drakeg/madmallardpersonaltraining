@@ -8,3 +8,6 @@
 - Sprint 4 (continued): Creative Studio homepage refresh and reusable brand assets implemented; pending CI, actual visual QA and Cloudflare deployment.
 - Sprint 5: Real consultation delivery, trainer profile and service content.
 - Sprint 6: Authenticated client/admin portal foundation, permissions and data model; defer private data collection until security and privacy acceptance criteria pass.
+
+- Sprint 4 quality gate: Chromium tests at 390/768/1024/1440 widths and consultation/guide navigation implemented; CI execution pending.
+- Sprint 5 increment: Published source for three educational guides using shared brand CSS; contact delivery remains blocked on verified configuration.
