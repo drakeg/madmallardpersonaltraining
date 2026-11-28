@@ -49,6 +49,22 @@ class BrowserTests(unittest.TestCase):
                 finally:
                     page.close()
 
+    def test_educational_guides(self):
+        page = self.browser.new_page(viewport={"width":390,"height":844}, reduced_motion="reduce")
+        try:
+            page.goto(self.url)
+            page.get_by_role("link", name="Read the planning guide").click()
+            self.assertTrue(page.url.endswith("guides.html#planning"))
+            self.assertTrue(page.locator("#planning").is_visible())
+            self.assertTrue(page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"))
+            for section in ("strength", "progress"):
+                page.locator(f'a[href="#{section}"]').click()
+                self.assertTrue(page.url.endswith("#"+section))
+            page.get_by_role("link", name="Return to homepage").click()
+            self.assertEqual(page.url, self.url)
+        finally:
+            page.close()
+
     def test_consultation_workflow(self):
         page = self.browser.new_page(viewport={"width":390,"height":844}, accept_downloads=True, reduced_motion="reduce")
         try:
